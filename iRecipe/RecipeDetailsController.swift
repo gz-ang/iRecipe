@@ -64,18 +64,26 @@ class RecipeDetailsController: UIViewController {
         
         print("Recipe edit done")
         recipeList.data[recipeRow] = recipe
+        recipeName = recipe.name
+        recipeType = recipe.type
+        recipeDesc = recipe.desc
+        recipeImagePath = recipe.imagePath
+        
         
         mealName.text = recipe.name
         mealDescription.text = "Description\n\(String(recipe.desc))"
         mealIngredients.text = "Ingredients"
+        recipeIngredients.removeAll()
         for each in recipe.ingredients {
             mealIngredients.text = (mealIngredients.text ?? "") + "\n - \(each)"
+            recipeIngredients.append(each)
             
         }
         mealInstructions.text = "Instructions"
+        recipeInstructions.removeAll()
         for i in 0..<recipe.instructions.count {
             mealInstructions.text = (mealInstructions.text ?? "") + "\n \(i+1). \(recipe.instructions[i])"
-            
+            recipeInstructions.append(recipe.instructions[i])
         }
         if recipe.imagePath.contains("name|") {
             let imageName = recipe.imagePath.replacingOccurrences(of: "name|", with: "")

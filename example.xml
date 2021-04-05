@@ -1,0 +1,71 @@
+<row>
+<recipe>
+<name>Recipe 1</name>
+<type>main</type>
+<desc>This is a main dish</desc>
+<imagePath>name|food1</imagePath>
+<ingredients>
+<ing>rice</ing>
+<ing>chicken</ing>
+</ingredients>
+<instructions><step>cook rice</step>
+<step>cook chicken</step>
+</instructions>
+</recipe>
+<recipe>
+<name>Recipe 2</name>
+<type>main</type>
+<desc>This is a main dish</desc>
+<imagePath>url|https://img.apmcdn.org/4b2716626c9ff3f6e5dfebe520eb592c33cf1e7b/uncropped/941f50-splendid-table-french-fries.jpg</imagePath>
+<ingredients>
+<ing>potato</ing>
+<ing>salt</ing>
+</ingredients>
+<instructions><step>cut potato</step>
+<step>fry potato</step>
+<step>add salt</step>
+</instructions>
+</recipe>
+<recipe>
+<name>Recipe 3</name>
+<type>side</type>
+<desc>This is a side dish</desc>
+<imagePath>url|https://img.apmcdn.org/4b2716626c9ff3f6e5dfebe520eb592c33cf1e7b/uncropped/941f50-splendid-table-french-fries.jpg</imagePath>
+<ingredients>
+<ing>potato</ing>
+<ing>salt</ing>
+</ingredients>
+<instructions><step>cut potato</step>
+<step>fry potato</step>
+<step>add salt</step>
+</instructions>
+</recipe>
+<recipe>
+<name>Recipe 4</name>
+<type>side</type>
+<desc>This is a side dish</desc>
+<imagePath>url|https://img.apmcdn.org/4b2716626c9ff3f6e5dfebe520eb592c33cf1e7b/uncropped/941f50-splendid-table-french-fries.jpg</imagePath>
+<ingredients>
+<ing>potato</ing>
+<ing>salt</ing>
+</ingredients>
+<instructions><step>cut potato</step>
+<step>fry potato</step>
+<step>add salt</step>
+</instructions>
+</recipe>
+<recipe>
+<name>Recipe 5 changed to recipe helloooooo</name>
+<type>main</type>
+<desc>This is a side dish change to this is a main dish</desc>
+<imagePath>url|https://img.apmcdn.org/4b2716626c9ff3f6e5dfebe520eb592c33cf1e7b/uncropped/941f50-splendid-table-french-fries.jpg</imagePath>
+<ingredients>
+<ing>potato banana</ing>
+<ing>salt himalayan</ing>
+</ingredients>
+<instructions><step>cut potato banana</step>
+<step>fry potato banana</step>
+<step>add salt himalayan</step>
+</instructions>
+</recipe>
+</row>

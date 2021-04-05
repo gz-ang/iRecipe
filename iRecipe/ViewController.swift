@@ -40,12 +40,15 @@ class ViewController: UIViewController,   UITextFieldDelegate, UITableViewDelega
         
         beginParsing(data: savedData)
         //recipeList.printRecipe()
+        recipeType = ["main", "side"]
         for element in recipeList.data {
             if !recipeType.contains(String(element.type!)) {
                 recipeType.append(String(element.type!))
             }
         }
-        selectedRecipeType = recipeType[0]
+        if recipeType.count != 0 {
+            selectedRecipeType = recipeType[0]
+        }
         recipeTypeText.text = selectedRecipeType
         for i in 0..<recipeList.data.count {
             if recipeList.data[i].type == selectedRecipeType {

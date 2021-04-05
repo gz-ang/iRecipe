@@ -29,7 +29,7 @@ func writeFile(url: URL, recipeData: Recipe) {
         for each in element.ingredients {
             dataString.append("<ing>\(each)</ing>\n")
         }
-        dataString.append("</ingredients>\n<instructions>")
+        dataString.append("</ingredients>\n<instructions>\n")
         for each in element.instructions {
             dataString.append("<step>\(each)</step>\n")
         }

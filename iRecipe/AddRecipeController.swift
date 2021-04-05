@@ -74,6 +74,8 @@ class AddRecipeController: UIViewController, UITableViewDataSource, UITableViewD
         instructionTableView.delegate = self
         instructionTableView.dataSource = self
         instructionTableView.tableFooterView = UIView()
+        recipeTypeList = [
+        "main", "side"]
         for each in recipeList.data {
             if !recipeTypeList.contains(each.type) {
                 recipeTypeList.append(each.type)
@@ -183,7 +185,7 @@ class AddRecipeController: UIViewController, UITableViewDataSource, UITableViewD
             
             // Set photoImageView to display the selected image.
             recipeImage.image = selectedImage
-            
+            imageChanged = true
             // Dismiss the picker.
             dismiss(animated: true, completion: nil)
     }
@@ -195,20 +197,38 @@ class AddRecipeController: UIViewController, UITableViewDataSource, UITableViewD
         ingredientsTableViewHeightConstraint.constant = ingredientsTableView.contentSize.height
         
     }
+    @IBAction func deleteIngredient(_ sender: UIButton) {
+        ingredientsCount = ingredientsCount - 1
+        ingredientsList.removeLast()
+        ingredientsTableView.reloadData()
+        ingredientsTableViewHeightConstraint.constant = ingredientsTableView.contentSize.height
+        
+    }
     @IBAction func addInstruction(_ sender: UIButton) {
         instructionCount = instructionCount + 1
         instructionTableView.reloadData()
         instructionsTableViewHeightConstraint.constant = instructionTableView.contentSize.height
     }
+    @IBAction func deleteInstruction(_ sender: Any) {
+        instructionCount = instructionCount - 1
+        instructionsList.removeLast()
+        instructionTableView.reloadData()
+        instructionsTableViewHeightConstraint.constant = instructionTableView.contentSize.height
+    }
     @IBAction func doneAddRecipe(_ sender: UIBarButtonItem) {
+       
+        //ingredientsList.removeAll()
         for i in 0..<ingredientsTableView.visibleCells.count {
             let temp = ingredientsTableView.visibleCells[i] as! TextInputTableViewCell
             ingredientsList[i] = temp.getTextInput()
+            //ingredientsList.append(temp.getTextInput())
             
         }
+        //instructionsList.removeAll()
         for i in 0..<instructionTableView.visibleCells.count {
             let temp = instructionTableView.visibleCells[i] as! TextInputTableViewCell2
             instructionsList[i] = temp.getTextInput()
+            //instructionsList.append(temp.getTextInput())
             
         }
         var tempIngList:[String] = [String]()

@@ -81,12 +81,19 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DT7-YN-zJ3">
-                                                        <rect key="frame" x="181" y="0.0" width="153" height="20.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DT7-YN-zJ3">
+                                                        <rect key="frame" x="181" y="0.0" width="123" height="20.5"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
                                                         <state key="normal" title="+"/>
                                                         <connections>
                                                             <action selector="addIngredient:" destination="9Xn-Yd-UF1" eventType="touchUpInside" id="vgK-jB-C7R"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jV-bu-HL2">
+                                                        <rect key="frame" x="304" y="0.0" width="30" height="20.5"/>
+                                                        <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="deleteIngredient:" destination="9Xn-Yd-UF1" eventType="touchUpInside" id="AFr-A1-NDN"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -138,11 +145,21 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqW-H9-TIu">
-                                                        <rect key="frame" x="185.5" y="0.0" width="148.5" height="20.5"/>
+                                                        <rect key="frame" x="185.5" y="0.0" width="118.5" height="20.5"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
                                                         <state key="normal" title="+"/>
                                                         <connections>
                                                             <action selector="addInstruction:" destination="9Xn-Yd-UF1" eventType="touchUpInside" id="ooO-xO-G88"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWq-hs-Gc2">
+                                                        <rect key="frame" x="304" y="0.0" width="30" height="20.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="lw5-hn-P7h"/>
+                                                        </constraints>
+                                                        <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="deleteInstruction:" destination="9Xn-Yd-UF1" eventType="touchUpInside" id="pKX-lm-OQl"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
